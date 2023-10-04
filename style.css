@@ -306,7 +306,7 @@ body {
   margin-left: -1rem;
 }
 
-.billing-cycle-option[aria-selected='true'] {
+.billing-cycle-option[aria-current='true'] {
   border-bottom: 1px solid var(--clr-slider-bg);
 }
 

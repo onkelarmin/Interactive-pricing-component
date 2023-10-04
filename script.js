@@ -21,11 +21,11 @@ toggle.checked = false
 
 toggle.addEventListener('change', () => {
   if (toggle.checked === true) {
-    monthlyBillingEl.setAttribute('aria-selected', 'false')
-    yearlyBillingEl.setAttribute('aria-selected', 'true')
+    monthlyBillingEl.setAttribute('aria-current', 'false')
+    yearlyBillingEl.setAttribute('aria-current', 'true')
   } else {
-    monthlyBillingEl.setAttribute('aria-selected', 'true')
-    yearlyBillingEl.setAttribute('aria-selected', 'false')
+    monthlyBillingEl.setAttribute('aria-current', 'true')
+    yearlyBillingEl.setAttribute('aria-current', 'false')
   }
   renderUI()
 })
@@ -41,7 +41,7 @@ function renderUI() {
   const currPricePerMonth = currRange.pricePerMonth
 
   const [currCycleEl] = billingCycleOptions.filter(
-    (option) => option.getAttribute('aria-selected') === 'true'
+    (option) => option.getAttribute('aria-current') === 'true'
   )
   const yearlyBilling = currCycleEl.dataset.cycle === 'yearly' ? true : false
 
