@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+    <title>Frontend Mentor | Interactive pricing component</title>
+  </head>
+  <body>
+    <header class="header">
+      <h1 class="header-title">Simple, traffic-based pricing</h1>
+      <p class="header-subtitle">
+        Sign-up for our 30-day trial. No credit card required.
+      </p>
+    </header>
+
+    <section class="pricing">
+      <div class="pricing-calculator">
+        <h2 class="visually-hidden">Pricing</h2>
+        <p class="page-views"><span class="value"></span> Pageviews</p>
+        <label for="slider" class="visually-hidden">Pageviews</label>
+        <input type="range" id="slider" min="0" max="4" value="2" />
+        <p class="price">
+          <span class="value"></span>/ <span class="period">month</span>
+        </p>
+        <div class="billing-cycle-wrapper">
+          <p
+            class="billing-cycle-option"
+            aria-selected="true"
+            data-cycle="monthly"
+          >
+            Monthly Billing
+          </p>
+          <label for="billing-cycle-toggle" class="visually-hidden"
+            >Select a billing cycle</label
+          >
+          <input type="checkbox" id="billing-cycle-toggle" />
+          <p
+            class="billing-cycle-option"
+            aria-selected="false"
+            data-cycle="yearly"
+          >
+            Yearly Billing
+          </p>
+        </div>
+      </div>
+
+      <footer class="pricing-footer">
+        <ul class="features">
+          <li>
+            <img src="./images/icon-check.svg" role="presentation" alt="" />
+            <span>Unlimited websites</span>
+          </li>
+          <li>
+            <img src="./images/icon-check.svg" role="presentation" alt="" />
+            <span>100% data ownership </span>
+          </li>
+          <li>
+            <img src="./images/icon-check.svg" role="presentation" alt="" />
+            <span>Email reports</span>
+          </li>
+        </ul>
+        <a href="#" class="btn">Start my trial</a>
+      </footer>
+    </section>
+  </body>
+</html>
